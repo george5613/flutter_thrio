@@ -833,6 +833,24 @@ class ThrioNavigatorImplement {
     return _taskQueue.add<bool>(popFuture).then((value) => value ?? false);
   }
 
+  Future<bool> popToUntil({
+    required bool Function(RouteSettings settings) predicate,
+    bool animated = true,
+  }) {
+    Future<bool> popFuture() async {
+      final routes = await allRoutes();
+      final route = routes
+          .lastWhereOrNull((it) => it.url.isNotEmpty && predicate(it));
+      if (route == null) {
+        return false;
+      }
+      return _sendChannel.popTo(
+          url: route.url, index: route.index, animated: animated);
+    }
+
+    return _taskQueue.add<bool>(popFuture).then((value) => value ?? false);
+  }
+
   Future<bool> popUntilFirst({
     required bool Function(String url) predicate,
     bool animated = true,

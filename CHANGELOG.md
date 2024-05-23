@@ -1,10 +1,14 @@
+## 4.9.4
+
+- feat: add popToUtil
+
 ## 4.9.3
 
 - fix: try to fix push single dismiss
 
 ## 4.9.2
 
-- fix: _children has not been initialized exception
+- fix: \_children has not been initialized exception
 
 ## 4.9.1
 
@@ -16,11 +20,11 @@
 
 ## 4.8.2
 
-- fix: _warpToNonAdjacentTab RangeError
+- fix: \_warpToNonAdjacentTab RangeError
 
 ## 4.8.1
 
-- fix: _childrenWithKey null exception
+- fix: \_childrenWithKey null exception
 
 ## 4.8.0
 
@@ -213,8 +217,8 @@ fix: removeBelowUntil and removeBelowUntilFirst not remove top
 
 - refactor: android engine startup flow
 - fix: occasional non-popable issues
-- fix: _delegate._current not init exception
-- fix: __NSCFBoolean compare: nil argument
+- fix: \_delegate.\_current not init exception
+- fix: \_\_NSCFBoolean compare: nil argument
 - fix: result nil crash
 - feat: async task queue timeout
 

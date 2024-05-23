@@ -345,6 +345,14 @@ abstract class ThrioNavigator {
       ThrioNavigatorImplement.shared()
           .popUntil(predicate: predicate, animated: animated);
 
+  
+    static Future<bool> popToUntil({
+    required bool Function(RouteSettings settings) predicate,
+    bool animated = true,
+  }) =>
+      ThrioNavigatorImplement.shared()
+          .popToUntil(predicate: predicate, animated: animated);
+
   /// Pop the page in the navigation stack until the first page with `url` satisfies the `predicate`.
   ///
   static Future<bool> popUntilFirst({
